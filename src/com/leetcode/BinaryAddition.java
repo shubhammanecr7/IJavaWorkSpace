@@ -23,7 +23,9 @@ public class BinaryAddition {
         StringBuilder sb = new StringBuilder(); // for storing result
 
         while (n1 >= 0 || n2 >= 0) {
-            int digit1 = 0, digit2 = 0, sum = 0;
+            int digit1 = 0;
+            int digit2 = 0;
+            int sum = 0;
             if (n1 >= 0) //extracting digits from last using n1 pointer for a string
                 digit1 = a.charAt(n1--) - '0';
             if (n2 >= 0) //extracting digits from last using n2 pointer for b string
