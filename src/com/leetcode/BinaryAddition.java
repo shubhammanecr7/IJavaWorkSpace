@@ -11,7 +11,7 @@ public class BinaryAddition {
     }
 
     /**
-     * here for addition we always add from last digit to first digit
+     * here for addition we always add from last digit to first digit,
      * so we declare n1&n2 pointer to start pointing from last to first digit
      */
     private static String addBinary(String a, String b) {
@@ -25,13 +25,12 @@ public class BinaryAddition {
         while (n1 >= 0 || n2 >= 0) {
             int digit1 = 0;
             int digit2 = 0;
-            int sum = 0;
             if (n1 >= 0) //extracting digits from last using n1 pointer for a string
                 digit1 = a.charAt(n1--) - '0';
             if (n2 >= 0) //extracting digits from last using n2 pointer for b string
                 digit2 = b.charAt(n2--) - '0';
 
-            sum = digit1 + digit2 + carry; // finding sum of digits + carry
+            int sum = digit1 + digit2 + carry; // finding sum of digits + carry
             if (sum >= base) { //if sum>=2 then we make carry 1 and sum 0 (1+1 sum=0 carry=1)
                 carry = 1;
                 sum -= base;
@@ -44,10 +43,10 @@ public class BinaryAddition {
         //now if carry after last two digit addition is remaining then we append it to result
         if (carry == 1) sb.append(carry);
 
-        /**
-        * now as we are storing addition in string builder from left to right but, we are
-         * doing actual addition from right to left side so at last we must return
-         * reversed result as output*/
+        /*
+         now as we are storing addition in string builder from left to right but, we are
+          doing actual addition from right to left side so at last we must return
+          reversed result as output*/
 
         return sb.reverse().toString();
     }
