@@ -11,7 +11,7 @@ public class DailyTemperatures {
     }
 
     private static int[] dailyTemperatures(int[] temperatures) {
-        Stack<Integer> stack = new Stack<Integer>();
+        Stack<Integer> stack = new Stack<>();
         int[] result = new int[temperatures.length];
         //we start checking from last index for next greater temperature index
         //and if found then we put index difference between current and previous
