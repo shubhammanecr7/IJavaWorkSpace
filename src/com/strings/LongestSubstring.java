@@ -28,5 +28,6 @@ public class LongestSubstring {
                 longestSubstring = map.keySet().toString();
             }
         }
+        System.out.println(longestSubstring);
     }
 }
