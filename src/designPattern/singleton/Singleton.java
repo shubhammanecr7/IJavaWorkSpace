@@ -1,4 +1,4 @@
-package designPattern;
+package designPattern.singleton;
 
 /**
  * In this singleton design pattern we will create a class in such a way that
